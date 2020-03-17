@@ -7,7 +7,7 @@ Aadhaar Offline Android SDK helps to onboard customers by using the Aadhaar XML 
 
 ### 2. In your app/build.gradle add the aadhaarofflinekyc SDK as a dependency
 
-       implementation project(path: ':aadhaarofflinekyc')
+       implementation project(path: ':aadhaarofflinekyc-debug')
     // appcompat required for acitivities(mandatory)
        
        implementation 'androidx.appcompat:appcompat:1.1.0'
