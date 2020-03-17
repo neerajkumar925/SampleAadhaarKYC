@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.payufin.aadhaarofflinekyc.activities.AOKLandingActivity">
+
+
+    <include layout="@layout/toolbar_activity_landing" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/download_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/download_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_grey_tick" />
+
+                        <View
+                            android:id="@+id/download_view"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/tick_grey" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/download_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:text="@string/download_aadhaar_file_from_the_official_website"
+                            android:theme="@style/AOKYCTextStyle"/>
+
+                        <Button
+                            android:id="@+id/download_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:onClick="downloadZipClicked"
+                            android:text="@string/download_zip"
+                            android:background="@drawable/bg_btn_download"
+                            android:theme="@style/DownloadAadhaarButtonStyle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/or"
+                            android:textSize="16dp"
+                            android:theme="@style/AOKYCHeaderTextStyle"/>
+
+                        <Button
+                            android:id="@+id/attach_file_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="attachZipClicked"
+                            android:text="@string/attach_zip"
+                            android:background="@drawable/bg_btn_attach"
+                            android:theme="@style/AttachAadhaarButtonStyle"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/attached_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:theme="@style/AOKYCHeaderTextStyle"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/share_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/layout_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/share_code_image_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            app:srcCompat="@drawable/ic_grey_tick" />
+
+                        <View
+                            android:id="@+id/share_code_view"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/tick_grey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/share_text_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:gravity="start"
+                                android:text="@string/share_your_share_code_with_us_to_verify"
+                                android:theme="@style/AOKYCTextStyle"/>
+
+                        </RelativeLayout>
+
+
+                        <EditText
+                            android:id="@+id/share_code_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/edit_text"
+                            android:ems="15"
+                            android:hint="@string/enter_share_code"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:padding="12dp"
+                            android:singleLine="true"
+                            android:enabled="false"/>
+
+                        <Button
+                            android:id="@+id/submit_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:onClick="onSubmit"
+                            android:text="@string/submit_zip"
+                            android:background="@drawable/bg_btn_download"
+                            android:theme="@style/SubmitButtonStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_close_tutorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/browser_close_tutorial"
+                    android:theme="@style/AOKYCTextStyle"/>
+
+                <LinearLayout
+                    android:id="@+id/label_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:id="@+id/powered_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/powered_by"
+                        android:textAllCaps="false"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="10sp"
+                        android:typeface="normal"
+                        android:theme="@style/AOKYCTextStyle"/>
+
+                    <TextView
+                        android:id="@+id/powered_by_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center"
+                        android:text="@string/powered_by_title"
+                        android:textColor="@color/aok_colorPrimary"
+                        android:textSize="12sp"
+                        android:theme="@style/AOKYCHeaderTextStyle"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

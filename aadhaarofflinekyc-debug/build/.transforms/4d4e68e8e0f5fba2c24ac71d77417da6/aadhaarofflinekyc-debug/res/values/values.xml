@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/apk/res-auto">
+    <color name="aok_colorAccent">#242956</color>
+    <color name="aok_colorPrimary">#ee3261</color>
+    <color name="aok_colorPrimaryDark">#dd2f5e</color>
+    <color name="light_gray">#fefefe</color>
+    <color name="tick_green">#008000</color>
+    <color name="tick_grey">#808080</color>
+    <color name="tick_orange">#FFA500</color>
+    <color name="title_text_color">#737373</color>
+    <color name="toolbar_bar_color" ns1:override="true">@color/aok_colorPrimary</color>
+    <string name="app_name">Aadhaar Zip Library</string>
+    <string name="attach_zip">Attach Zip</string>
+    <string name="auto_start_permission_tutorial"><![CDATA[Go to your Phone Settings > Installed Apps > LazyPay > Other Permissions > Start in background, enable. Proceed if already enabled.]]></string>
+    <string name="browser_close_tutorial">Please click on top-left cross icon after downloading zip file on UIDAI page, if it doesn\'t close automatically</string>
+    <string name="download_aadhaar_file_from_the_official_website">Download Aadhaar file from the official website</string>
+    <string name="download_zip">Download Aadhaar</string>
+    <string name="enter_share_code">Enter Share Code</string>
+    <string name="file_not_attached">File could not be attached.</string>
+    <string name="landing_screen_title">Complete your KYC</string>
+    <string name="or">OR</string>
+    <string name="powered_by">Powered by</string>
+    <string name="powered_by_title">LazyPay</string>
+    <string name="proceed">Proceed</string>
+    <string name="settings">Settings</string>
+    <string name="share_your_share_code_with_us_to_verify">Share your share code with us to verify</string>
+    <string name="submit_zip">Submit</string>
+    <style name="AOKYCHeaderTextStyle">
+    </style>
+    <style name="AOKYCTextStyle">
+    </style>
+    <style name="AttachAadhaarButtonStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="DownloadAadhaarButtonStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="KYCAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/aok_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/aok_colorPrimaryDark</item>
+        <item name="colorAccent">@color/aok_colorAccent</item>
+        <item name="android:statusBarColor">@color/aok_colorPrimaryDark</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <style name="KYCAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+    </style>
+    <style name="SubmitButtonStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+</resources>
